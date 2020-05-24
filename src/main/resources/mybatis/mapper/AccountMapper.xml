@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bit.security.mapper.AccountMapper">
+
+    <select id="readAccount"  parameterType="String" resultType="com.bit.security.domain.Account">
+		SELECT * FROM USER_INFO
+		WHERE ID= #{id}
+	</select>
+
+<!--    <select id="readAuthorites"  parameterType="String" resultType="String">-->
+<!--		SELECT AUTHORITY_NAME-->
+<!--		FROM [BSHOP_DATA].dbo.AUTHORITY WHERE USERNAME=#{userName}-->
+<!--	</select>-->
+
+<!--    <insert id="insertUser" parameterType="com.bit.security.domain.Account">-->
+<!--		INSERT [BSHOP_DATA].dbo.USER_INFO-->
+<!--		VALUES (-->
+<!--		#{id},-->
+<!--		#{password},-->
+<!--		#{isAccountNonExpired},-->
+<!--		#{isAccountNonLocked},-->
+<!--		#{isCredentialsNonExpired},-->
+<!--		#{isEnabled}-->
+<!--		)-->
+<!--	</insert>-->
+
+<!--    <insert id="insertUserAuthority" parameterType="com.bit.security.domain.Authority">-->
+<!--		INSERT INTO [BSHOP_DATA].dbo.AUTHORITY-->
+<!--		VALUES (-->
+<!--		#{userName},-->
+<!--		#{authorityName}-->
+<!--		)-->
+<!--	</insert>-->
+
+<!--    <update id="failCntUpdate" parameterType="String" >-->
+<!--		UPDATE [BSHOP_DATA].dbo.USER_INFO-->
+<!--		SET failCnt = isnull(failCnt, 0)+1-->
+<!--		WHERE ID = #{id}-->
+<!--	</update>-->
+
+<!--    <select id="getFailCnt"  parameterType="String" resultType="com.bit.security.domain.Account">-->
+<!--		SELECT failCnt, isEnabled FROM [BSHOP_DATA].dbo.USER_INFO-->
+<!--		WHERE ID= #{id}-->
+<!--	</select>-->
+
+<!--    <update id="changeEnabled" parameterType="String" >-->
+<!--		UPDATE [BSHOP_DATA].dbo.USER_INFO-->
+<!--		SET isEnabled = (CASE isEnabled WHEN 0 THEN 1 ELSE 0 END) ,-->
+<!--		failCnt = (CASE isEnabled WHEN 1 THEN 0 ELSE failCnt END)-->
+<!--		WHERE ID = #{id}-->
+<!--	</update>-->
+
+<!--    <update id="resetFailCnt" parameterType="String" >-->
+<!--		UPDATE [BSHOP_DATA].dbo.USER_INFO-->
+<!--		SET failCnt = 0-->
+<!--		WHERE ID = #{id}-->
+<!--	</update>-->
+
+</mapper>
