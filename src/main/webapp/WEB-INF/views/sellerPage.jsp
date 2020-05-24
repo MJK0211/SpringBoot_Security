@@ -8,6 +8,9 @@
 
 </head>
 <body>
+<form action ="/admin">
+<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 <h1>업체만접근가능하다</h1>
+</form>
 </body>
 </html>

@@ -1,0 +1,4 @@
+[INFO ] 2020-05-25 05:57:54.843 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2020-05-25 05:57:54.869 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 05:57:54.940 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2020-05-25 05:57:54.975 [restartedMain] SecurityApplication - Started SecurityApplication in 3.723 seconds (JVM running for 5.529)

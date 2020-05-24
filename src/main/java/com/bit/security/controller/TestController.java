@@ -11,9 +11,19 @@ public class TestController {
     @Autowired
     AccountMapper accountMapper;
 
-    @RequestMapping("/signin")
-    public String signin() {
-        return "signin";
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @RequestMapping("/logout")
+    public String logout() {
+        return "login";
+    }
+
+    @RequestMapping("/loginSuccess")
+    public String loginSuccess() {
+        return "loginSuccess";
     }
 
     @RequestMapping("/seller")
@@ -35,10 +45,4 @@ public class TestController {
     public String admin() {
         return "adminPage";
     }
-
-    @RequestMapping("/logout")
-    public String logout() {
-        return "logout";
-    }
-
 }
