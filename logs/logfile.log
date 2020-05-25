@@ -496,3 +496,1090 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 [INFO ] 2020-05-25 05:57:54.869 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 [INFO ] 2020-05-25 05:57:54.940 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
 [INFO ] 2020-05-25 05:57:54.975 [restartedMain] SecurityApplication - Started SecurityApplication in 3.723 seconds (JVM running for 5.529)
+[INFO ] 2020-05-25 06:07:18.015 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-05-25 06:07:18.016 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-05-25 06:07:18.023 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 7 ms
+[INFO ] 2020-05-25 06:07:23.309 [http-nio-8080-exec-2] CustomAuthenticationProvider - ### authenticate ### 
+[INFO ] 2020-05-25 06:07:23.310 [http-nio-8080-exec-2] AccountService - ## loadUserByUsername ##
+[INFO ] 2020-05-25 06:07:23.341 [http-nio-8080-exec-2] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-05-25 06:07:23.481 [http-nio-8080-exec-2] connection - 1. Connection opened
+[INFO ] 2020-05-25 06:07:23.482 [http-nio-8080-exec-2] audit - 1. Connection.new Connection returned 
+[INFO ] 2020-05-25 06:07:23.482 [http-nio-8080-exec-2] audit - 1. Connection.getNetworkTimeout() returned 0
+[INFO ] 2020-05-25 06:07:23.483 [http-nio-8080-exec-2] audit - 1. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.484 [http-nio-8080-exec-2] audit - 1. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.484 [http-nio-8080-exec-2] audit - 1. Connection.isValid(1) returned true
+[INFO ] 2020-05-25 06:07:23.485 [http-nio-8080-exec-2] audit - 1. Connection.getTransactionIsolation() returned 4
+[INFO ] 2020-05-25 06:07:23.490 [http-nio-8080-exec-2] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-05-25 06:07:23.492 [http-nio-8080-exec-2] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 06:07:23.498 [http-nio-8080-exec-2] readAccount - ==>  Preparing: SELECT * FROM USER_INFO WHERE ID= ? 
+[INFO ] 2020-05-25 06:07:23.521 [http-nio-8080-exec-2] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 06:07:23.521 [http-nio-8080-exec-2] audit - 1. Connection.prepareStatement(SELECT * FROM USER_INFO
+		WHERE ID= ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@62c705c3
+[INFO ] 2020-05-25 06:07:23.543 [http-nio-8080-exec-2] audit - 1. PreparedStatement.setString(1, "admin") returned 
+[DEBUG] 2020-05-25 06:07:23.544 [http-nio-8080-exec-2] readAccount - ==> Parameters: admin(String)
+[INFO ] 2020-05-25 06:07:23.549 [http-nio-8080-exec-2] sqlonly - SELECT * FROM USER_INFO
+		WHERE ID= 'admin'
+
+[INFO ] 2020-05-25 06:07:23.570 [http-nio-8080-exec-2] sqltiming - SELECT * FROM USER_INFO
+		WHERE ID= 'admin'
+ {executed in 20 msec}
+[INFO ] 2020-05-25 06:07:23.571 [http-nio-8080-exec-2] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 06:07:23.579 [http-nio-8080-exec-2] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 06:07:23.579 [http-nio-8080-exec-2] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@2900e516
+[INFO ] 2020-05-25 06:07:23.616 [http-nio-8080-exec-2] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@4567a181 - Field level information: 
+	com.mysql.cj.result.Field@2986f0c8[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=id,originalColumnName=id,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@638238ae[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@4243b47a[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonexpired,originalColumnName=isAccountNonexpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@3ad06e1a[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonLocked,originalColumnName=isAccountNonLocked,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@244ed938[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isCredentialsNonExpired,originalColumnName=isCredentialsNonExpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@56fbc257[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isEnabled,originalColumnName=isEnabled,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+[INFO ] 2020-05-25 06:07:23.632 [HikariPool-1 connection adder] connection - 2. Connection opened
+[INFO ] 2020-05-25 06:07:23.641 [HikariPool-1 connection adder] audit - 2. Connection.new Connection returned 
+[INFO ] 2020-05-25 06:07:23.643 [HikariPool-1 connection adder] audit - 2. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.644 [HikariPool-1 connection adder] audit - 2. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.651 [http-nio-8080-exec-2] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 06:07:23.653 [http-nio-8080-exec-2] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 06:07:23.655 [HikariPool-1 connection adder] connection - 3. Connection opened
+[INFO ] 2020-05-25 06:07:23.655 [HikariPool-1 connection adder] audit - 3. Connection.new Connection returned 
+[INFO ] 2020-05-25 06:07:23.657 [HikariPool-1 connection adder] audit - 3. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.657 [HikariPool-1 connection adder] audit - 3. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.667 [HikariPool-1 connection adder] connection - 4. Connection opened
+[INFO ] 2020-05-25 06:07:23.670 [HikariPool-1 connection adder] audit - 4. Connection.new Connection returned 
+[INFO ] 2020-05-25 06:07:23.673 [HikariPool-1 connection adder] audit - 4. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.674 [HikariPool-1 connection adder] audit - 4. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.682 [http-nio-8080-exec-2] resultset - 1. ResultSet.getString(id) returned admin
+[INFO ] 2020-05-25 06:07:23.683 [HikariPool-1 connection adder] connection - 5. Connection opened
+[INFO ] 2020-05-25 06:07:23.683 [HikariPool-1 connection adder] audit - 5. Connection.new Connection returned 
+[INFO ] 2020-05-25 06:07:23.683 [http-nio-8080-exec-2] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 06:07:23.685 [http-nio-8080-exec-2] resultset - 1. ResultSet.getString(password) returned {bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO
+[INFO ] 2020-05-25 06:07:23.685 [HikariPool-1 connection adder] audit - 5. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.685 [http-nio-8080-exec-2] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 06:07:23.685 [HikariPool-1 connection adder] audit - 5. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.690 [http-nio-8080-exec-2] resultset - 1. ResultSet.getBoolean(isAccountNonexpired) returned true
+[INFO ] 2020-05-25 06:07:23.691 [http-nio-8080-exec-2] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 06:07:23.693 [http-nio-8080-exec-2] resultset - 1. ResultSet.getBoolean(isAccountNonLocked) returned true
+[INFO ] 2020-05-25 06:07:23.694 [http-nio-8080-exec-2] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 06:07:23.694 [http-nio-8080-exec-2] resultset - 1. ResultSet.getBoolean(isCredentialsNonExpired) returned true
+[INFO ] 2020-05-25 06:07:23.695 [http-nio-8080-exec-2] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 06:07:23.696 [http-nio-8080-exec-2] resultset - 1. ResultSet.getBoolean(isEnabled) returned true
+[INFO ] 2020-05-25 06:07:23.697 [http-nio-8080-exec-2] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 06:07:23.699 [HikariPool-1 connection adder] connection - 6. Connection opened
+[INFO ] 2020-05-25 06:07:23.705 [HikariPool-1 connection adder] audit - 6. Connection.new Connection returned 
+[INFO ] 2020-05-25 06:07:23.708 [HikariPool-1 connection adder] audit - 6. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.709 [HikariPool-1 connection adder] audit - 6. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.715 [http-nio-8080-exec-2] resultsettable - 
+|------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|id    |password                                                             |isaccountnonexpired |isaccountnonlocked |iscredentialsnonexpired |isenabled |
+|------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|admin |{bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO |true                |true               |true                    |true      |
+|------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+
+[INFO ] 2020-05-25 06:07:23.717 [HikariPool-1 connection adder] connection - 7. Connection opened
+[INFO ] 2020-05-25 06:07:23.719 [http-nio-8080-exec-2] resultset - 1. ResultSet.next() returned false
+[INFO ] 2020-05-25 06:07:23.722 [HikariPool-1 connection adder] audit - 7. Connection.new Connection returned 
+[DEBUG] 2020-05-25 06:07:23.725 [http-nio-8080-exec-2] readAccount - <==      Total: 1
+[INFO ] 2020-05-25 06:07:23.725 [HikariPool-1 connection adder] audit - 7. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.725 [HikariPool-1 connection adder] audit - 7. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.735 [http-nio-8080-exec-2] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 06:07:23.740 [http-nio-8080-exec-2] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@356a22a9
+[INFO ] 2020-05-25 06:07:23.744 [HikariPool-1 connection adder] connection - 8. Connection opened
+[INFO ] 2020-05-25 06:07:23.745 [HikariPool-1 connection adder] audit - 8. Connection.new Connection returned 
+[INFO ] 2020-05-25 06:07:23.747 [HikariPool-1 connection adder] audit - 8. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.755 [HikariPool-1 connection adder] audit - 8. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.756 [http-nio-8080-exec-2] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 06:07:23.767 [http-nio-8080-exec-2] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 06:07:23.787 [HikariPool-1 connection adder] connection - 9. Connection opened
+[INFO ] 2020-05-25 06:07:23.788 [http-nio-8080-exec-2] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 06:07:23.788 [HikariPool-1 connection adder] audit - 9. Connection.new Connection returned 
+[INFO ] 2020-05-25 06:07:23.790 [HikariPool-1 connection adder] audit - 9. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.791 [HikariPool-1 connection adder] audit - 9. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.797 [http-nio-8080-exec-2] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 06:07:23.803 [http-nio-8080-exec-2] audit - 1. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 06:07:23.803 [HikariPool-1 connection adder] connection - 10. Connection opened
+[DEBUG] 2020-05-25 06:07:23.809 [http-nio-8080-exec-2] readAuthorites - ==>  Preparing: SELECT AUTHORITY_NAME FROM AUTHORITY WHERE USERNAME=? 
+[INFO ] 2020-05-25 06:07:23.809 [HikariPool-1 connection adder] audit - 10. Connection.new Connection returned 
+[INFO ] 2020-05-25 06:07:23.810 [http-nio-8080-exec-2] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 06:07:23.810 [http-nio-8080-exec-2] audit - 1. Connection.prepareStatement(SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@52d50a89
+[INFO ] 2020-05-25 06:07:23.811 [http-nio-8080-exec-2] audit - 1. PreparedStatement.setString(1, "admin") returned 
+[INFO ] 2020-05-25 06:07:23.811 [HikariPool-1 connection adder] audit - 10. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 06:07:23.811 [HikariPool-1 connection adder] audit - 10. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 06:07:23.817 [http-nio-8080-exec-2] readAuthorites - ==> Parameters: admin(String)
+[INFO ] 2020-05-25 06:07:23.819 [http-nio-8080-exec-2] sqlonly - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='admin'
+
+[INFO ] 2020-05-25 06:07:23.823 [http-nio-8080-exec-2] sqltiming - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='admin'
+ {executed in 4 msec}
+[INFO ] 2020-05-25 06:07:23.824 [http-nio-8080-exec-2] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 06:07:23.824 [http-nio-8080-exec-2] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 06:07:23.825 [http-nio-8080-exec-2] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@66263cce
+[INFO ] 2020-05-25 06:07:23.825 [http-nio-8080-exec-2] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@15e7239f - Field level information: 
+	com.mysql.cj.result.Field@5993bc3a[dbName=test,tableName=AUTHORITY,originalTableName=authority,columnName=AUTHORITY_NAME,originalColumnName=authority_name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+[INFO ] 2020-05-25 06:07:23.827 [http-nio-8080-exec-2] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 06:07:23.832 [http-nio-8080-exec-2] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 06:07:23.836 [http-nio-8080-exec-2] resultset - 1. ResultSet.getString(AUTHORITY_NAME) returned ROLE_ADMIN
+[INFO ] 2020-05-25 06:07:23.837 [http-nio-8080-exec-2] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 06:07:23.839 [http-nio-8080-exec-2] resultsettable - 
+|---------------|
+|authority_name |
+|---------------|
+|ROLE_ADMIN     |
+|---------------|
+
+[INFO ] 2020-05-25 06:07:23.840 [http-nio-8080-exec-2] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 06:07:23.840 [http-nio-8080-exec-2] readAuthorites - <==      Total: 1
+[INFO ] 2020-05-25 06:07:23.841 [http-nio-8080-exec-2] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 06:07:23.842 [http-nio-8080-exec-2] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@58a8c2e7
+[INFO ] 2020-05-25 06:07:23.842 [http-nio-8080-exec-2] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 06:07:23.846 [http-nio-8080-exec-2] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 06:07:23.846 [http-nio-8080-exec-2] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 06:07:23.847 [http-nio-8080-exec-2] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 06:08:07.571 [http-nio-8080-exec-7] CustomAuthenticationProvider - ### authenticate ### 
+[INFO ] 2020-05-25 06:08:07.571 [http-nio-8080-exec-7] AccountService - ## loadUserByUsername ##
+[INFO ] 2020-05-25 06:08:07.573 [http-nio-8080-exec-7] audit - 1. Connection.isValid(5) returned true
+[INFO ] 2020-05-25 06:08:07.573 [http-nio-8080-exec-7] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 06:08:07.574 [http-nio-8080-exec-7] readAccount - ==>  Preparing: SELECT * FROM USER_INFO WHERE ID= ? 
+[INFO ] 2020-05-25 06:08:07.574 [http-nio-8080-exec-7] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 06:08:07.575 [http-nio-8080-exec-7] audit - 1. Connection.prepareStatement(SELECT * FROM USER_INFO
+		WHERE ID= ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@2f2d0bf6
+[INFO ] 2020-05-25 06:08:07.578 [http-nio-8080-exec-7] audit - 1. PreparedStatement.setString(1, "") returned 
+[DEBUG] 2020-05-25 06:08:07.579 [http-nio-8080-exec-7] readAccount - ==> Parameters: (String)
+[INFO ] 2020-05-25 06:08:07.581 [http-nio-8080-exec-7] sqlonly - SELECT * FROM USER_INFO
+		WHERE ID= ''
+
+[INFO ] 2020-05-25 06:08:07.584 [http-nio-8080-exec-7] sqltiming - SELECT * FROM USER_INFO
+		WHERE ID= ''
+ {executed in 2 msec}
+[INFO ] 2020-05-25 06:08:07.585 [http-nio-8080-exec-7] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 06:08:07.585 [http-nio-8080-exec-7] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 06:08:07.585 [http-nio-8080-exec-7] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@59dab11e
+[INFO ] 2020-05-25 06:08:07.586 [http-nio-8080-exec-7] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@1cf67a52 - Field level information: 
+	com.mysql.cj.result.Field@5b43b081[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=id,originalColumnName=id,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@538466ba[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@5fda7f95[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonexpired,originalColumnName=isAccountNonexpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@7051bad6[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonLocked,originalColumnName=isAccountNonLocked,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@3650dbe5[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isCredentialsNonExpired,originalColumnName=isCredentialsNonExpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@4691da23[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isEnabled,originalColumnName=isEnabled,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+[INFO ] 2020-05-25 06:08:07.586 [http-nio-8080-exec-7] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 06:08:07.591 [http-nio-8080-exec-7] resultsettable - 
+|---|---------|--------------------|-------------------|------------------------|----------|
+|id |password |isaccountnonexpired |isaccountnonlocked |iscredentialsnonexpired |isenabled |
+|---|---------|--------------------|-------------------|------------------------|----------|
+|---|---------|--------------------|-------------------|------------------------|----------|
+
+[INFO ] 2020-05-25 06:08:07.591 [http-nio-8080-exec-7] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 06:08:07.592 [http-nio-8080-exec-7] readAccount - <==      Total: 0
+[INFO ] 2020-05-25 06:08:07.592 [http-nio-8080-exec-7] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 06:08:07.592 [http-nio-8080-exec-7] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@7feddc6
+[INFO ] 2020-05-25 06:08:07.592 [http-nio-8080-exec-7] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 06:08:07.592 [http-nio-8080-exec-7] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 06:08:07.594 [http-nio-8080-exec-7] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 06:08:07.594 [http-nio-8080-exec-7] audit - 1. Connection.clearWarnings() returned 
+[DEBUG] 2020-05-25 06:08:07.594 [http-nio-8080-exec-7] AccountService - ## 계정정보가 존재하지 않습니다. ##
+[INFO ] 2020-05-25 06:08:23.932 [SpringContextShutdownHook] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 06:08:23.934 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2020-05-25 06:08:23.947 [HikariPool-1 connection closer] connection - 1. Connection closed
+[INFO ] 2020-05-25 06:08:23.947 [HikariPool-1 connection closer] audit - 1. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.949 [HikariPool-1 connection closer] connection - 2. Connection closed
+[INFO ] 2020-05-25 06:08:23.949 [HikariPool-1 connection closer] audit - 2. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.950 [HikariPool-1 connection closer] connection - 3. Connection closed
+[INFO ] 2020-05-25 06:08:23.953 [HikariPool-1 connection closer] audit - 3. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.954 [HikariPool-1 connection closer] connection - 4. Connection closed
+[INFO ] 2020-05-25 06:08:23.954 [HikariPool-1 connection closer] audit - 4. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.955 [HikariPool-1 connection closer] connection - 5. Connection closed
+[INFO ] 2020-05-25 06:08:23.955 [HikariPool-1 connection closer] audit - 5. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.956 [HikariPool-1 connection closer] connection - 6. Connection closed
+[INFO ] 2020-05-25 06:08:23.956 [HikariPool-1 connection closer] audit - 6. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.958 [HikariPool-1 connection closer] connection - 7. Connection closed
+[INFO ] 2020-05-25 06:08:23.959 [HikariPool-1 connection closer] audit - 7. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.960 [HikariPool-1 connection closer] connection - 8. Connection closed
+[INFO ] 2020-05-25 06:08:23.960 [HikariPool-1 connection closer] audit - 8. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.965 [HikariPool-1 connection closer] connection - 9. Connection closed
+[INFO ] 2020-05-25 06:08:23.966 [HikariPool-1 connection closer] audit - 9. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.967 [HikariPool-1 connection closer] connection - 10. Connection closed
+[INFO ] 2020-05-25 06:08:23.967 [HikariPool-1 connection closer] audit - 10. Connection.close() returned 
+[INFO ] 2020-05-25 06:08:23.968 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2020-05-25 09:04:16.335 [restartedMain] SecurityApplication - Starting SecurityApplication on gimminjong-ui-MacBook-Pro.local with PID 728 (/Users/mjk/IdeaProjects/security/build/classes/java/main started by mjk in /Users/mjk/IdeaProjects/security)
+[DEBUG] 2020-05-25 09:04:16.345 [restartedMain] SecurityApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+[INFO ] 2020-05-25 09:04:16.346 [restartedMain] SecurityApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2020-05-25 09:04:16.404 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2020-05-25 09:04:16.414 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2020-05-25 09:04:18.684 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-05-25 09:04:18.699 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:04:18.700 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2020-05-25 09:04:18.700 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+[INFO ] 2020-05-25 09:04:19.193 [restartedMain] TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 2020-05-25 09:04:19.202 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-05-25 09:04:19.203 [restartedMain] ContextLoader - Root WebApplicationContext: initialization completed in 2789 ms
+[INFO ] 2020-05-25 09:04:19.996 [restartedMain] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 09:04:20.085 [restartedMain] WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2020-05-25 09:04:20.411 [restartedMain] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fedecf3, org.springframework.security.web.context.SecurityContextPersistenceFilter@ee470c9, org.springframework.security.web.header.HeaderWriterFilter@17476e63, org.springframework.security.web.csrf.CsrfFilter@df60eab, org.springframework.security.web.authentication.logout.LogoutFilter@6c9fb981, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@75e944e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b018da4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60ef713a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23900409, org.springframework.security.web.session.SessionManagementFilter@8fcccee, org.springframework.security.web.access.ExceptionTranslationFilter@11576b93, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@76e3306e]
+[INFO ] 2020-05-25 09:04:20.454 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2020-05-25 09:04:20.478 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:04:20.530 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2020-05-25 09:04:20.545 [restartedMain] SecurityApplication - Started SecurityApplication in 4.696 seconds (JVM running for 7.478)
+[INFO ] 2020-05-25 09:04:27.979 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:04:27.980 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:04:27.990 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 10 ms
+[INFO ] 2020-05-25 09:04:36.593 [http-nio-8080-exec-8] CustomAuthenticationProvider - ### authenticate ### 
+[INFO ] 2020-05-25 09:04:36.594 [http-nio-8080-exec-8] AccountService - ## loadUserByUsername ##
+[INFO ] 2020-05-25 09:04:36.649 [http-nio-8080-exec-8] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-05-25 09:04:36.872 [http-nio-8080-exec-8] connection - 1. Connection opened
+[INFO ] 2020-05-25 09:04:36.872 [http-nio-8080-exec-8] audit - 1. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:36.873 [http-nio-8080-exec-8] audit - 1. Connection.getNetworkTimeout() returned 0
+[INFO ] 2020-05-25 09:04:36.874 [http-nio-8080-exec-8] audit - 1. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:04:36.874 [http-nio-8080-exec-8] audit - 1. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:36.874 [http-nio-8080-exec-8] audit - 1. Connection.isValid(1) returned true
+[INFO ] 2020-05-25 09:04:36.875 [http-nio-8080-exec-8] audit - 1. Connection.getTransactionIsolation() returned 4
+[INFO ] 2020-05-25 09:04:36.879 [http-nio-8080-exec-8] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-05-25 09:04:36.883 [http-nio-8080-exec-8] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 09:04:36.889 [http-nio-8080-exec-8] readAccount - ==>  Preparing: SELECT * FROM USER_INFO WHERE ID= ? 
+[INFO ] 2020-05-25 09:04:36.917 [http-nio-8080-exec-8] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 09:04:36.917 [http-nio-8080-exec-8] audit - 1. Connection.prepareStatement(SELECT * FROM USER_INFO
+		WHERE ID= ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@57c73486
+[INFO ] 2020-05-25 09:04:36.940 [http-nio-8080-exec-8] audit - 1. PreparedStatement.setString(1, "member") returned 
+[DEBUG] 2020-05-25 09:04:36.940 [http-nio-8080-exec-8] readAccount - ==> Parameters: member(String)
+[INFO ] 2020-05-25 09:04:36.941 [http-nio-8080-exec-8] sqlonly - SELECT * FROM USER_INFO
+		WHERE ID= 'member'
+
+[INFO ] 2020-05-25 09:04:36.970 [http-nio-8080-exec-8] sqltiming - SELECT * FROM USER_INFO
+		WHERE ID= 'member'
+ {executed in 28 msec}
+[INFO ] 2020-05-25 09:04:36.970 [http-nio-8080-exec-8] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 09:04:36.976 [http-nio-8080-exec-8] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 09:04:36.977 [http-nio-8080-exec-8] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@502ce444
+[INFO ] 2020-05-25 09:04:36.992 [HikariPool-1 connection adder] connection - 2. Connection opened
+[INFO ] 2020-05-25 09:04:36.993 [HikariPool-1 connection adder] audit - 2. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:36.994 [HikariPool-1 connection adder] audit - 2. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:04:36.995 [HikariPool-1 connection adder] audit - 2. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.008 [HikariPool-1 connection adder] connection - 3. Connection opened
+[INFO ] 2020-05-25 09:04:37.008 [http-nio-8080-exec-8] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@9e6561b - Field level information: 
+	com.mysql.cj.result.Field@f93778e[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=id,originalColumnName=id,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@6dea7525[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@2275df57[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonexpired,originalColumnName=isAccountNonexpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1918038c[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonLocked,originalColumnName=isAccountNonLocked,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@da32826[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isCredentialsNonExpired,originalColumnName=isCredentialsNonExpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@33de27ea[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isEnabled,originalColumnName=isEnabled,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+[INFO ] 2020-05-25 09:04:37.008 [HikariPool-1 connection adder] audit - 3. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:37.015 [http-nio-8080-exec-8] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 09:04:37.017 [HikariPool-1 connection adder] audit - 3. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:04:37.017 [http-nio-8080-exec-8] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 09:04:37.018 [HikariPool-1 connection adder] audit - 3. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.030 [HikariPool-1 connection adder] connection - 4. Connection opened
+[INFO ] 2020-05-25 09:04:37.031 [HikariPool-1 connection adder] audit - 4. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:37.035 [HikariPool-1 connection adder] audit - 4. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:04:37.035 [HikariPool-1 connection adder] audit - 4. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.038 [http-nio-8080-exec-8] resultset - 1. ResultSet.getString(id) returned member
+[INFO ] 2020-05-25 09:04:37.039 [http-nio-8080-exec-8] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:04:37.043 [http-nio-8080-exec-8] resultset - 1. ResultSet.getString(password) returned {bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO
+[INFO ] 2020-05-25 09:04:37.044 [http-nio-8080-exec-8] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:04:37.047 [http-nio-8080-exec-8] resultset - 1. ResultSet.getBoolean(isAccountNonexpired) returned true
+[INFO ] 2020-05-25 09:04:37.048 [http-nio-8080-exec-8] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:04:37.048 [http-nio-8080-exec-8] resultset - 1. ResultSet.getBoolean(isAccountNonLocked) returned true
+[INFO ] 2020-05-25 09:04:37.049 [HikariPool-1 connection adder] connection - 5. Connection opened
+[INFO ] 2020-05-25 09:04:37.049 [http-nio-8080-exec-8] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:04:37.049 [HikariPool-1 connection adder] audit - 5. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:37.049 [http-nio-8080-exec-8] resultset - 1. ResultSet.getBoolean(isCredentialsNonExpired) returned true
+[INFO ] 2020-05-25 09:04:37.051 [HikariPool-1 connection adder] audit - 5. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:04:37.053 [http-nio-8080-exec-8] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:04:37.053 [HikariPool-1 connection adder] audit - 5. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.053 [http-nio-8080-exec-8] resultset - 1. ResultSet.getBoolean(isEnabled) returned true
+[INFO ] 2020-05-25 09:04:37.053 [http-nio-8080-exec-8] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:04:37.061 [http-nio-8080-exec-8] resultsettable - 
+|-------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|id     |password                                                             |isaccountnonexpired |isaccountnonlocked |iscredentialsnonexpired |isenabled |
+|-------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|member |{bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO |true                |true               |true                    |true      |
+|-------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+
+[INFO ] 2020-05-25 09:04:37.062 [http-nio-8080-exec-8] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 09:04:37.070 [http-nio-8080-exec-8] readAccount - <==      Total: 1
+[INFO ] 2020-05-25 09:04:37.071 [http-nio-8080-exec-8] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 09:04:37.077 [http-nio-8080-exec-8] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@5846f13f
+[INFO ] 2020-05-25 09:04:37.100 [http-nio-8080-exec-8] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 09:04:37.102 [http-nio-8080-exec-8] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 09:04:37.106 [http-nio-8080-exec-8] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 09:04:37.111 [HikariPool-1 connection adder] connection - 6. Connection opened
+[INFO ] 2020-05-25 09:04:37.113 [http-nio-8080-exec-8] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 09:04:37.113 [HikariPool-1 connection adder] audit - 6. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:37.116 [http-nio-8080-exec-8] audit - 1. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.132 [HikariPool-1 connection adder] audit - 6. Connection.isReadOnly() returned false
+[DEBUG] 2020-05-25 09:04:37.140 [http-nio-8080-exec-8] readAuthorites - ==>  Preparing: SELECT AUTHORITY_NAME FROM AUTHORITY WHERE USERNAME=? 
+[INFO ] 2020-05-25 09:04:37.143 [HikariPool-1 connection adder] audit - 6. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.152 [http-nio-8080-exec-8] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 09:04:37.153 [http-nio-8080-exec-8] audit - 1. Connection.prepareStatement(SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4490454e
+[INFO ] 2020-05-25 09:04:37.154 [http-nio-8080-exec-8] audit - 1. PreparedStatement.setString(1, "member") returned 
+[DEBUG] 2020-05-25 09:04:37.159 [http-nio-8080-exec-8] readAuthorites - ==> Parameters: member(String)
+[INFO ] 2020-05-25 09:04:37.164 [http-nio-8080-exec-8] sqlonly - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='member'
+
+[INFO ] 2020-05-25 09:04:37.207 [HikariPool-1 connection adder] connection - 7. Connection opened
+[INFO ] 2020-05-25 09:04:37.210 [HikariPool-1 connection adder] audit - 7. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:37.209 [http-nio-8080-exec-8] sqltiming - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='member'
+ {executed in 27 msec}
+[INFO ] 2020-05-25 09:04:37.218 [http-nio-8080-exec-8] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 09:04:37.218 [HikariPool-1 connection adder] audit - 7. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:04:37.219 [HikariPool-1 connection adder] audit - 7. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.245 [HikariPool-1 connection adder] connection - 8. Connection opened
+[INFO ] 2020-05-25 09:04:37.245 [HikariPool-1 connection adder] audit - 8. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:37.250 [HikariPool-1 connection adder] audit - 8. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:04:37.219 [http-nio-8080-exec-8] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 09:04:37.256 [HikariPool-1 connection adder] audit - 8. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.259 [http-nio-8080-exec-8] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@3a99c422
+[INFO ] 2020-05-25 09:04:37.266 [http-nio-8080-exec-8] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@179d8d03 - Field level information: 
+	com.mysql.cj.result.Field@5161008b[dbName=test,tableName=AUTHORITY,originalTableName=authority,columnName=AUTHORITY_NAME,originalColumnName=authority_name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+[INFO ] 2020-05-25 09:04:37.270 [HikariPool-1 connection adder] connection - 9. Connection opened
+[INFO ] 2020-05-25 09:04:37.271 [HikariPool-1 connection adder] audit - 9. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:37.279 [HikariPool-1 connection adder] audit - 9. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:04:37.280 [HikariPool-1 connection adder] audit - 9. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.283 [http-nio-8080-exec-8] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 09:04:37.285 [http-nio-8080-exec-8] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 09:04:37.286 [HikariPool-1 connection adder] connection - 10. Connection opened
+[INFO ] 2020-05-25 09:04:37.287 [HikariPool-1 connection adder] audit - 10. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:04:37.287 [HikariPool-1 connection adder] audit - 10. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:04:37.287 [http-nio-8080-exec-8] resultset - 1. ResultSet.getString(AUTHORITY_NAME) returned ROLE_MEMBER
+[INFO ] 2020-05-25 09:04:37.288 [HikariPool-1 connection adder] audit - 10. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:04:37.288 [http-nio-8080-exec-8] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:04:37.293 [http-nio-8080-exec-8] resultsettable - 
+|---------------|
+|authority_name |
+|---------------|
+|ROLE_MEMBER    |
+|---------------|
+
+[INFO ] 2020-05-25 09:04:37.293 [http-nio-8080-exec-8] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 09:04:37.293 [http-nio-8080-exec-8] readAuthorites - <==      Total: 1
+[INFO ] 2020-05-25 09:04:37.294 [http-nio-8080-exec-8] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 09:04:37.296 [http-nio-8080-exec-8] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@654a4a08
+[INFO ] 2020-05-25 09:04:37.296 [http-nio-8080-exec-8] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 09:04:37.297 [http-nio-8080-exec-8] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 09:04:37.297 [http-nio-8080-exec-8] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 09:04:37.301 [http-nio-8080-exec-8] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 09:08:04.422 [SpringContextShutdownHook] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 09:08:04.424 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2020-05-25 09:08:04.432 [HikariPool-1 connection closer] connection - 1. Connection closed
+[INFO ] 2020-05-25 09:08:04.432 [HikariPool-1 connection closer] audit - 1. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.433 [HikariPool-1 connection closer] connection - 2. Connection closed
+[INFO ] 2020-05-25 09:08:04.433 [HikariPool-1 connection closer] audit - 2. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.433 [HikariPool-1 connection closer] connection - 3. Connection closed
+[INFO ] 2020-05-25 09:08:04.434 [HikariPool-1 connection closer] audit - 3. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.434 [HikariPool-1 connection closer] connection - 4. Connection closed
+[INFO ] 2020-05-25 09:08:04.434 [HikariPool-1 connection closer] audit - 4. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.436 [HikariPool-1 connection closer] connection - 5. Connection closed
+[INFO ] 2020-05-25 09:08:04.437 [HikariPool-1 connection closer] audit - 5. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.437 [HikariPool-1 connection closer] connection - 6. Connection closed
+[INFO ] 2020-05-25 09:08:04.438 [HikariPool-1 connection closer] audit - 6. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.438 [HikariPool-1 connection closer] connection - 7. Connection closed
+[INFO ] 2020-05-25 09:08:04.438 [HikariPool-1 connection closer] audit - 7. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.439 [HikariPool-1 connection closer] connection - 8. Connection closed
+[INFO ] 2020-05-25 09:08:04.439 [HikariPool-1 connection closer] audit - 8. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.440 [HikariPool-1 connection closer] connection - 9. Connection closed
+[INFO ] 2020-05-25 09:08:04.440 [HikariPool-1 connection closer] audit - 9. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.441 [HikariPool-1 connection closer] connection - 10. Connection closed
+[INFO ] 2020-05-25 09:08:04.442 [HikariPool-1 connection closer] audit - 10. Connection.close() returned 
+[INFO ] 2020-05-25 09:08:04.442 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2020-05-25 09:08:17.068 [restartedMain] SecurityApplication - Starting SecurityApplication on gimminjong-ui-MacBook-Pro.local with PID 756 (/Users/mjk/IdeaProjects/security/build/classes/java/main started by mjk in /Users/mjk/IdeaProjects/security)
+[DEBUG] 2020-05-25 09:08:17.080 [restartedMain] SecurityApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+[INFO ] 2020-05-25 09:08:17.081 [restartedMain] SecurityApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2020-05-25 09:08:17.128 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2020-05-25 09:08:17.128 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2020-05-25 09:08:18.459 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-05-25 09:08:18.469 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:08:18.470 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2020-05-25 09:08:18.470 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+[INFO ] 2020-05-25 09:08:18.793 [restartedMain] TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 2020-05-25 09:08:18.798 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-05-25 09:08:18.798 [restartedMain] ContextLoader - Root WebApplicationContext: initialization completed in 1619 ms
+[INFO ] 2020-05-25 09:08:19.372 [restartedMain] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 09:08:19.437 [restartedMain] WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2020-05-25 09:08:19.672 [restartedMain] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b3a9eab, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b3ff928, org.springframework.security.web.header.HeaderWriterFilter@cb614b9, org.springframework.security.web.csrf.CsrfFilter@1dee27d4, org.springframework.security.web.authentication.logout.LogoutFilter@6b21e636, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1c33ccd9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a2ae5fb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3be6e6ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a66f361, org.springframework.security.web.session.SessionManagementFilter@67671cad, org.springframework.security.web.access.ExceptionTranslationFilter@7155c8e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@796d20fe]
+[INFO ] 2020-05-25 09:08:19.709 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2020-05-25 09:08:19.733 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:08:19.780 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2020-05-25 09:08:19.795 [restartedMain] SecurityApplication - Started SecurityApplication in 3.145 seconds (JVM running for 5.481)
+[INFO ] 2020-05-25 09:08:21.309 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:08:21.309 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:08:21.317 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2020-05-25 09:08:29.314 [http-nio-8080-exec-2] TestController - ------------------------로그인------------------------
+[INFO ] 2020-05-25 09:08:36.161 [http-nio-8080-exec-3] CustomAuthenticationProvider - ### authenticate ### 
+[INFO ] 2020-05-25 09:08:36.162 [http-nio-8080-exec-3] AccountService - ## loadUserByUsername ##
+[INFO ] 2020-05-25 09:08:36.195 [http-nio-8080-exec-3] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-05-25 09:08:36.332 [http-nio-8080-exec-3] connection - 1. Connection opened
+[INFO ] 2020-05-25 09:08:36.332 [http-nio-8080-exec-3] audit - 1. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.333 [http-nio-8080-exec-3] audit - 1. Connection.getNetworkTimeout() returned 0
+[INFO ] 2020-05-25 09:08:36.334 [http-nio-8080-exec-3] audit - 1. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.334 [http-nio-8080-exec-3] audit - 1. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.335 [http-nio-8080-exec-3] audit - 1. Connection.isValid(1) returned true
+[INFO ] 2020-05-25 09:08:36.335 [http-nio-8080-exec-3] audit - 1. Connection.getTransactionIsolation() returned 4
+[INFO ] 2020-05-25 09:08:36.340 [http-nio-8080-exec-3] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-05-25 09:08:36.345 [http-nio-8080-exec-3] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 09:08:36.354 [http-nio-8080-exec-3] readAccount - ==>  Preparing: SELECT * FROM USER_INFO WHERE ID= ? 
+[INFO ] 2020-05-25 09:08:36.388 [http-nio-8080-exec-3] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 09:08:36.389 [http-nio-8080-exec-3] audit - 1. Connection.prepareStatement(SELECT * FROM USER_INFO
+		WHERE ID= ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5a2edd86
+[INFO ] 2020-05-25 09:08:36.423 [http-nio-8080-exec-3] audit - 1. PreparedStatement.setString(1, "member") returned 
+[DEBUG] 2020-05-25 09:08:36.424 [http-nio-8080-exec-3] readAccount - ==> Parameters: member(String)
+[INFO ] 2020-05-25 09:08:36.426 [http-nio-8080-exec-3] sqlonly - SELECT * FROM USER_INFO
+		WHERE ID= 'member'
+
+[INFO ] 2020-05-25 09:08:36.470 [HikariPool-1 connection adder] connection - 2. Connection opened
+[INFO ] 2020-05-25 09:08:36.471 [HikariPool-1 connection adder] audit - 2. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.473 [HikariPool-1 connection adder] audit - 2. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.482 [HikariPool-1 connection adder] audit - 2. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.505 [HikariPool-1 connection adder] connection - 3. Connection opened
+[INFO ] 2020-05-25 09:08:36.506 [HikariPool-1 connection adder] audit - 3. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.506 [http-nio-8080-exec-3] sqltiming - SELECT * FROM USER_INFO
+		WHERE ID= 'member'
+ {executed in 79 msec}
+[INFO ] 2020-05-25 09:08:36.508 [HikariPool-1 connection adder] audit - 3. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.509 [HikariPool-1 connection adder] audit - 3. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.510 [http-nio-8080-exec-3] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 09:08:36.519 [HikariPool-1 connection adder] connection - 4. Connection opened
+[INFO ] 2020-05-25 09:08:36.520 [HikariPool-1 connection adder] audit - 4. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.522 [HikariPool-1 connection adder] audit - 4. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.523 [http-nio-8080-exec-3] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 09:08:36.525 [HikariPool-1 connection adder] audit - 4. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.527 [http-nio-8080-exec-3] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@19f3283
+[INFO ] 2020-05-25 09:08:36.536 [HikariPool-1 connection adder] connection - 5. Connection opened
+[INFO ] 2020-05-25 09:08:36.536 [HikariPool-1 connection adder] audit - 5. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.538 [HikariPool-1 connection adder] audit - 5. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.539 [HikariPool-1 connection adder] audit - 5. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.548 [HikariPool-1 connection adder] connection - 6. Connection opened
+[INFO ] 2020-05-25 09:08:36.548 [HikariPool-1 connection adder] audit - 6. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.554 [HikariPool-1 connection adder] audit - 6. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.555 [HikariPool-1 connection adder] audit - 6. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.563 [HikariPool-1 connection adder] connection - 7. Connection opened
+[INFO ] 2020-05-25 09:08:36.564 [HikariPool-1 connection adder] audit - 7. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.565 [HikariPool-1 connection adder] audit - 7. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.566 [HikariPool-1 connection adder] audit - 7. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.578 [http-nio-8080-exec-3] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@1ce40f8f - Field level information: 
+	com.mysql.cj.result.Field@3f64fc96[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=id,originalColumnName=id,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@8387f20[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@2b1938b3[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonexpired,originalColumnName=isAccountNonexpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@173dd228[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonLocked,originalColumnName=isAccountNonLocked,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@f250c15[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isCredentialsNonExpired,originalColumnName=isCredentialsNonExpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@442fb3ae[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isEnabled,originalColumnName=isEnabled,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+[INFO ] 2020-05-25 09:08:36.581 [HikariPool-1 connection adder] connection - 8. Connection opened
+[INFO ] 2020-05-25 09:08:36.585 [http-nio-8080-exec-3] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 09:08:36.649 [HikariPool-1 connection adder] audit - 8. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.656 [http-nio-8080-exec-3] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 09:08:36.656 [HikariPool-1 connection adder] audit - 8. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.656 [HikariPool-1 connection adder] audit - 8. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.775 [HikariPool-1 connection adder] connection - 9. Connection opened
+[INFO ] 2020-05-25 09:08:36.779 [HikariPool-1 connection adder] audit - 9. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.785 [HikariPool-1 connection adder] audit - 9. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.785 [HikariPool-1 connection adder] audit - 9. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.794 [HikariPool-1 connection adder] connection - 10. Connection opened
+[INFO ] 2020-05-25 09:08:36.794 [http-nio-8080-exec-3] resultset - 1. ResultSet.getString(id) returned member
+[INFO ] 2020-05-25 09:08:36.797 [HikariPool-1 connection adder] audit - 10. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:08:36.798 [http-nio-8080-exec-3] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:08:36.799 [HikariPool-1 connection adder] audit - 10. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:08:36.799 [http-nio-8080-exec-3] resultset - 1. ResultSet.getString(password) returned {bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO
+[INFO ] 2020-05-25 09:08:36.799 [HikariPool-1 connection adder] audit - 10. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:08:36.800 [http-nio-8080-exec-3] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:08:36.801 [http-nio-8080-exec-3] resultset - 1. ResultSet.getBoolean(isAccountNonexpired) returned true
+[INFO ] 2020-05-25 09:08:36.802 [http-nio-8080-exec-3] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:08:36.807 [http-nio-8080-exec-3] resultset - 1. ResultSet.getBoolean(isAccountNonLocked) returned true
+[INFO ] 2020-05-25 09:08:36.809 [http-nio-8080-exec-3] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:08:36.811 [http-nio-8080-exec-3] resultset - 1. ResultSet.getBoolean(isCredentialsNonExpired) returned true
+[INFO ] 2020-05-25 09:08:36.811 [http-nio-8080-exec-3] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:08:36.812 [http-nio-8080-exec-3] resultset - 1. ResultSet.getBoolean(isEnabled) returned true
+[INFO ] 2020-05-25 09:08:36.812 [http-nio-8080-exec-3] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:08:36.817 [http-nio-8080-exec-3] resultsettable - 
+|-------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|id     |password                                                             |isaccountnonexpired |isaccountnonlocked |iscredentialsnonexpired |isenabled |
+|-------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|member |{bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO |true                |true               |true                    |true      |
+|-------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+
+[INFO ] 2020-05-25 09:08:36.817 [http-nio-8080-exec-3] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 09:08:36.821 [http-nio-8080-exec-3] readAccount - <==      Total: 1
+[INFO ] 2020-05-25 09:08:36.823 [http-nio-8080-exec-3] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 09:08:36.828 [http-nio-8080-exec-3] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@6d7dc4c2
+[INFO ] 2020-05-25 09:08:36.833 [http-nio-8080-exec-3] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 09:08:36.834 [http-nio-8080-exec-3] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 09:08:36.836 [http-nio-8080-exec-3] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 09:08:36.841 [http-nio-8080-exec-3] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 09:08:36.843 [http-nio-8080-exec-3] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 09:08:36.845 [http-nio-8080-exec-3] readAuthorites - ==>  Preparing: SELECT AUTHORITY_NAME FROM AUTHORITY WHERE USERNAME=? 
+[INFO ] 2020-05-25 09:08:36.845 [http-nio-8080-exec-3] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 09:08:36.854 [http-nio-8080-exec-3] audit - 1. Connection.prepareStatement(SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@52f3692
+[INFO ] 2020-05-25 09:08:36.855 [http-nio-8080-exec-3] audit - 1. PreparedStatement.setString(1, "member") returned 
+[DEBUG] 2020-05-25 09:08:36.862 [http-nio-8080-exec-3] readAuthorites - ==> Parameters: member(String)
+[INFO ] 2020-05-25 09:08:36.864 [http-nio-8080-exec-3] sqlonly - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='member'
+
+[INFO ] 2020-05-25 09:08:36.868 [http-nio-8080-exec-3] sqltiming - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='member'
+ {executed in 2 msec}
+[INFO ] 2020-05-25 09:08:36.872 [http-nio-8080-exec-3] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 09:08:36.875 [http-nio-8080-exec-3] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 09:08:36.881 [http-nio-8080-exec-3] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5319338a
+[INFO ] 2020-05-25 09:08:36.891 [http-nio-8080-exec-3] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@53c45f44 - Field level information: 
+	com.mysql.cj.result.Field@2fa36808[dbName=test,tableName=AUTHORITY,originalTableName=authority,columnName=AUTHORITY_NAME,originalColumnName=authority_name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+[INFO ] 2020-05-25 09:08:36.896 [http-nio-8080-exec-3] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 09:08:36.899 [http-nio-8080-exec-3] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 09:08:36.903 [http-nio-8080-exec-3] resultset - 1. ResultSet.getString(AUTHORITY_NAME) returned ROLE_MEMBER
+[INFO ] 2020-05-25 09:08:36.907 [http-nio-8080-exec-3] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:08:36.909 [http-nio-8080-exec-3] resultsettable - 
+|---------------|
+|authority_name |
+|---------------|
+|ROLE_MEMBER    |
+|---------------|
+
+[INFO ] 2020-05-25 09:08:36.915 [http-nio-8080-exec-3] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 09:08:36.917 [http-nio-8080-exec-3] readAuthorites - <==      Total: 1
+[INFO ] 2020-05-25 09:08:36.920 [http-nio-8080-exec-3] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 09:08:36.923 [http-nio-8080-exec-3] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@24f0abbe
+[INFO ] 2020-05-25 09:08:36.927 [http-nio-8080-exec-3] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 09:08:36.929 [http-nio-8080-exec-3] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 09:08:36.931 [http-nio-8080-exec-3] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 09:08:36.938 [http-nio-8080-exec-3] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 09:08:37.233 [http-nio-8080-exec-4] TestController - ------------------------로그인성공------------------------
+[INFO ] 2020-05-25 09:08:43.158 [http-nio-8080-exec-5] TestController - ------------------------멤버페이지------------------------
+[INFO ] 2020-05-25 09:08:43.647 [http-nio-8080-exec-6] TestController - ------------------------멤버페이지------------------------
+[INFO ] 2020-05-25 09:08:47.014 [http-nio-8080-exec-7] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:08:47.765 [http-nio-8080-exec-8] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:08:53.297 [http-nio-8080-exec-9] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:08:56.529 [http-nio-8080-exec-10] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:24:11.131 [SpringContextShutdownHook] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 09:24:11.132 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2020-05-25 09:24:11.141 [HikariPool-1 connection closer] connection - 1. Connection closed
+[INFO ] 2020-05-25 09:24:11.141 [HikariPool-1 connection closer] audit - 1. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.142 [HikariPool-1 connection closer] connection - 2. Connection closed
+[INFO ] 2020-05-25 09:24:11.142 [HikariPool-1 connection closer] audit - 2. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.143 [HikariPool-1 connection closer] connection - 3. Connection closed
+[INFO ] 2020-05-25 09:24:11.143 [HikariPool-1 connection closer] audit - 3. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.144 [HikariPool-1 connection closer] connection - 4. Connection closed
+[INFO ] 2020-05-25 09:24:11.144 [HikariPool-1 connection closer] audit - 4. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.145 [HikariPool-1 connection closer] connection - 5. Connection closed
+[INFO ] 2020-05-25 09:24:11.145 [HikariPool-1 connection closer] audit - 5. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.147 [HikariPool-1 connection closer] connection - 6. Connection closed
+[INFO ] 2020-05-25 09:24:11.147 [HikariPool-1 connection closer] audit - 6. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.148 [HikariPool-1 connection closer] connection - 7. Connection closed
+[INFO ] 2020-05-25 09:24:11.148 [HikariPool-1 connection closer] audit - 7. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.149 [HikariPool-1 connection closer] connection - 8. Connection closed
+[INFO ] 2020-05-25 09:24:11.149 [HikariPool-1 connection closer] audit - 8. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.150 [HikariPool-1 connection closer] connection - 9. Connection closed
+[INFO ] 2020-05-25 09:24:11.150 [HikariPool-1 connection closer] audit - 9. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.151 [HikariPool-1 connection closer] connection - 10. Connection closed
+[INFO ] 2020-05-25 09:24:11.151 [HikariPool-1 connection closer] audit - 10. Connection.close() returned 
+[INFO ] 2020-05-25 09:24:11.151 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2020-05-25 09:24:20.432 [restartedMain] SecurityApplication - Starting SecurityApplication on gimminjong-ui-MacBook-Pro.local with PID 781 (/Users/mjk/IdeaProjects/security/build/classes/java/main started by mjk in /Users/mjk/IdeaProjects/security)
+[DEBUG] 2020-05-25 09:24:20.441 [restartedMain] SecurityApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+[INFO ] 2020-05-25 09:24:20.442 [restartedMain] SecurityApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2020-05-25 09:24:20.498 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2020-05-25 09:24:20.498 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2020-05-25 09:24:21.891 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-05-25 09:24:21.899 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:24:21.908 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2020-05-25 09:24:21.909 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+[INFO ] 2020-05-25 09:24:22.310 [restartedMain] TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 2020-05-25 09:24:22.315 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-05-25 09:24:22.315 [restartedMain] ContextLoader - Root WebApplicationContext: initialization completed in 1816 ms
+[ERROR] 2020-05-25 09:24:22.365 [restartedMain] StandardManager - Exception loading sessions from persistent storage
+java.io.InvalidClassException: com.bit.security.domain.Account; local class incompatible: stream classdesc serialVersionUID = 8864111297850841157, local class serialVersionUID = -2979767013141119108
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:699) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1941) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1807) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2098) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1624) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2343) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2267) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2125) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1624) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2343) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2267) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2125) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1624) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:464) ~[?:1.8.0_251]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:422) ~[?:1.8.0_251]
+	at org.apache.catalina.session.StandardSession.doReadObject(StandardSession.java:1587) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:1040) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:218) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:162) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:354) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5164) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) [?:1.8.0_251]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) [?:1.8.0_251]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:468) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:176) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) [spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at com.bit.security.SecurityApplication.main(SecurityApplication.java:10) [main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_251]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_251]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_251]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+[INFO ] 2020-05-25 09:24:23.034 [restartedMain] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 09:24:23.128 [restartedMain] WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2020-05-25 09:24:23.426 [restartedMain] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42af596b, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e6a81ab, org.springframework.security.web.header.HeaderWriterFilter@59fe1df0, org.springframework.security.web.csrf.CsrfFilter@22798eca, org.springframework.security.web.authentication.logout.LogoutFilter@62c1f224, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@30a5761f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fdc17b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d7c23bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7547ee54, org.springframework.security.web.session.SessionManagementFilter@a4d1669, org.springframework.security.web.access.ExceptionTranslationFilter@692a890d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ff0c63]
+[INFO ] 2020-05-25 09:24:23.479 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2020-05-25 09:24:23.501 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:24:23.544 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2020-05-25 09:24:23.558 [restartedMain] SecurityApplication - Started SecurityApplication in 3.521 seconds (JVM running for 5.494)
+[INFO ] 2020-05-25 09:24:29.742 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:24:29.742 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:24:29.751 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 9 ms
+[INFO ] 2020-05-25 09:24:34.468 [http-nio-8080-exec-2] TestController - ------------------------로그인------------------------
+[INFO ] 2020-05-25 09:24:35.005 [http-nio-8080-exec-3] TestController - ------------------------로그인------------------------
+[INFO ] 2020-05-25 09:24:39.464 [http-nio-8080-exec-4] CustomAuthenticationProvider - ### authenticate ### 
+[INFO ] 2020-05-25 09:24:39.468 [http-nio-8080-exec-4] AccountService - ## loadUserByUsername ##
+[INFO ] 2020-05-25 09:24:39.518 [http-nio-8080-exec-4] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-05-25 09:24:39.702 [http-nio-8080-exec-4] connection - 1. Connection opened
+[INFO ] 2020-05-25 09:24:39.703 [http-nio-8080-exec-4] audit - 1. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.703 [http-nio-8080-exec-4] audit - 1. Connection.getNetworkTimeout() returned 0
+[INFO ] 2020-05-25 09:24:39.708 [http-nio-8080-exec-4] audit - 1. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.710 [http-nio-8080-exec-4] audit - 1. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:39.714 [http-nio-8080-exec-4] audit - 1. Connection.isValid(1) returned true
+[INFO ] 2020-05-25 09:24:39.716 [http-nio-8080-exec-4] audit - 1. Connection.getTransactionIsolation() returned 4
+[INFO ] 2020-05-25 09:24:39.722 [http-nio-8080-exec-4] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-05-25 09:24:39.735 [http-nio-8080-exec-4] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 09:24:39.748 [http-nio-8080-exec-4] readAccount - ==>  Preparing: SELECT * FROM USER_INFO WHERE ID= ? 
+[INFO ] 2020-05-25 09:24:39.781 [http-nio-8080-exec-4] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 09:24:39.781 [http-nio-8080-exec-4] audit - 1. Connection.prepareStatement(SELECT * FROM USER_INFO
+		WHERE ID= ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1cfbe89c
+[INFO ] 2020-05-25 09:24:39.809 [http-nio-8080-exec-4] audit - 1. PreparedStatement.setString(1, "admin") returned 
+[DEBUG] 2020-05-25 09:24:39.810 [http-nio-8080-exec-4] readAccount - ==> Parameters: admin(String)
+[INFO ] 2020-05-25 09:24:39.812 [http-nio-8080-exec-4] sqlonly - SELECT * FROM USER_INFO
+		WHERE ID= 'admin'
+
+[INFO ] 2020-05-25 09:24:39.831 [http-nio-8080-exec-4] sqltiming - SELECT * FROM USER_INFO
+		WHERE ID= 'admin'
+ {executed in 19 msec}
+[INFO ] 2020-05-25 09:24:39.831 [http-nio-8080-exec-4] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 09:24:39.841 [HikariPool-1 connection adder] connection - 2. Connection opened
+[INFO ] 2020-05-25 09:24:39.841 [HikariPool-1 connection adder] audit - 2. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.841 [http-nio-8080-exec-4] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 09:24:39.842 [http-nio-8080-exec-4] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@14e03df
+[INFO ] 2020-05-25 09:24:39.842 [HikariPool-1 connection adder] audit - 2. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.846 [HikariPool-1 connection adder] audit - 2. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:39.857 [HikariPool-1 connection adder] connection - 3. Connection opened
+[INFO ] 2020-05-25 09:24:39.857 [HikariPool-1 connection adder] audit - 3. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.858 [HikariPool-1 connection adder] audit - 3. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.858 [HikariPool-1 connection adder] audit - 3. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:39.870 [HikariPool-1 connection adder] connection - 4. Connection opened
+[INFO ] 2020-05-25 09:24:39.870 [HikariPool-1 connection adder] audit - 4. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.871 [HikariPool-1 connection adder] audit - 4. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.872 [HikariPool-1 connection adder] audit - 4. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:39.875 [http-nio-8080-exec-4] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@14a790d0 - Field level information: 
+	com.mysql.cj.result.Field@7e08453c[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=id,originalColumnName=id,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@71ba8249[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@5851f503[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonexpired,originalColumnName=isAccountNonexpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@70d8cfc9[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonLocked,originalColumnName=isAccountNonLocked,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@4cc5554b[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isCredentialsNonExpired,originalColumnName=isCredentialsNonExpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@69482e50[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isEnabled,originalColumnName=isEnabled,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+[INFO ] 2020-05-25 09:24:39.878 [http-nio-8080-exec-4] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 09:24:39.879 [HikariPool-1 connection adder] connection - 5. Connection opened
+[INFO ] 2020-05-25 09:24:39.881 [HikariPool-1 connection adder] audit - 5. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.881 [http-nio-8080-exec-4] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 09:24:39.882 [HikariPool-1 connection adder] audit - 5. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.883 [HikariPool-1 connection adder] audit - 5. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:39.891 [HikariPool-1 connection adder] connection - 6. Connection opened
+[INFO ] 2020-05-25 09:24:39.891 [HikariPool-1 connection adder] audit - 6. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.893 [HikariPool-1 connection adder] audit - 6. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.894 [HikariPool-1 connection adder] audit - 6. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:39.895 [http-nio-8080-exec-4] resultset - 1. ResultSet.getString(id) returned admin
+[INFO ] 2020-05-25 09:24:39.897 [http-nio-8080-exec-4] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:24:39.898 [http-nio-8080-exec-4] resultset - 1. ResultSet.getString(password) returned {bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO
+[INFO ] 2020-05-25 09:24:39.898 [http-nio-8080-exec-4] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:24:39.899 [http-nio-8080-exec-4] resultset - 1. ResultSet.getBoolean(isAccountNonexpired) returned true
+[INFO ] 2020-05-25 09:24:39.899 [http-nio-8080-exec-4] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:24:39.900 [http-nio-8080-exec-4] resultset - 1. ResultSet.getBoolean(isAccountNonLocked) returned true
+[INFO ] 2020-05-25 09:24:39.900 [http-nio-8080-exec-4] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:24:39.900 [HikariPool-1 connection adder] connection - 7. Connection opened
+[INFO ] 2020-05-25 09:24:39.900 [http-nio-8080-exec-4] resultset - 1. ResultSet.getBoolean(isCredentialsNonExpired) returned true
+[INFO ] 2020-05-25 09:24:39.900 [HikariPool-1 connection adder] audit - 7. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.902 [http-nio-8080-exec-4] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:24:39.902 [http-nio-8080-exec-4] resultset - 1. ResultSet.getBoolean(isEnabled) returned true
+[INFO ] 2020-05-25 09:24:39.903 [http-nio-8080-exec-4] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:24:39.903 [HikariPool-1 connection adder] audit - 7. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.903 [HikariPool-1 connection adder] audit - 7. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:39.906 [http-nio-8080-exec-4] resultsettable - 
+|------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|id    |password                                                             |isaccountnonexpired |isaccountnonlocked |iscredentialsnonexpired |isenabled |
+|------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|admin |{bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO |true                |true               |true                    |true      |
+|------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+
+[INFO ] 2020-05-25 09:24:39.907 [http-nio-8080-exec-4] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 09:24:39.910 [http-nio-8080-exec-4] readAccount - <==      Total: 1
+[INFO ] 2020-05-25 09:24:39.911 [http-nio-8080-exec-4] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 09:24:39.914 [http-nio-8080-exec-4] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@33f07299
+[INFO ] 2020-05-25 09:24:39.921 [http-nio-8080-exec-4] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 09:24:39.923 [http-nio-8080-exec-4] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 09:24:39.924 [http-nio-8080-exec-4] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 09:24:39.924 [HikariPool-1 connection adder] connection - 8. Connection opened
+[INFO ] 2020-05-25 09:24:39.924 [HikariPool-1 connection adder] audit - 8. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.925 [HikariPool-1 connection adder] audit - 8. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.926 [HikariPool-1 connection adder] audit - 8. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:39.932 [http-nio-8080-exec-4] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 09:24:39.938 [http-nio-8080-exec-4] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 09:24:39.938 [http-nio-8080-exec-4] readAuthorites - ==>  Preparing: SELECT AUTHORITY_NAME FROM AUTHORITY WHERE USERNAME=? 
+[INFO ] 2020-05-25 09:24:39.938 [http-nio-8080-exec-4] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 09:24:39.939 [http-nio-8080-exec-4] audit - 1. Connection.prepareStatement(SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@226b537
+[INFO ] 2020-05-25 09:24:39.939 [http-nio-8080-exec-4] audit - 1. PreparedStatement.setString(1, "admin") returned 
+[DEBUG] 2020-05-25 09:24:39.940 [http-nio-8080-exec-4] readAuthorites - ==> Parameters: admin(String)
+[INFO ] 2020-05-25 09:24:39.940 [http-nio-8080-exec-4] sqlonly - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='admin'
+
+[INFO ] 2020-05-25 09:24:39.954 [http-nio-8080-exec-4] sqltiming - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='admin'
+ {executed in 5 msec}
+[INFO ] 2020-05-25 09:24:39.961 [http-nio-8080-exec-4] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 09:24:39.962 [http-nio-8080-exec-4] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 09:24:39.962 [http-nio-8080-exec-4] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@4de791cd
+[INFO ] 2020-05-25 09:24:39.962 [http-nio-8080-exec-4] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@4c64909a - Field level information: 
+	com.mysql.cj.result.Field@7b5c0b2c[dbName=test,tableName=AUTHORITY,originalTableName=authority,columnName=AUTHORITY_NAME,originalColumnName=authority_name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+[INFO ] 2020-05-25 09:24:39.962 [http-nio-8080-exec-4] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 09:24:39.962 [http-nio-8080-exec-4] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 09:24:39.968 [HikariPool-1 connection adder] connection - 9. Connection opened
+[INFO ] 2020-05-25 09:24:39.971 [HikariPool-1 connection adder] audit - 9. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.972 [HikariPool-1 connection adder] audit - 9. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.972 [http-nio-8080-exec-4] resultset - 1. ResultSet.getString(AUTHORITY_NAME) returned ROLE_ADMIN
+[INFO ] 2020-05-25 09:24:39.972 [HikariPool-1 connection adder] audit - 9. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:39.972 [http-nio-8080-exec-4] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:24:39.974 [http-nio-8080-exec-4] resultsettable - 
+|---------------|
+|authority_name |
+|---------------|
+|ROLE_ADMIN     |
+|---------------|
+
+[INFO ] 2020-05-25 09:24:39.974 [http-nio-8080-exec-4] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 09:24:39.975 [http-nio-8080-exec-4] readAuthorites - <==      Total: 1
+[INFO ] 2020-05-25 09:24:39.978 [http-nio-8080-exec-4] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 09:24:39.978 [http-nio-8080-exec-4] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@27486309
+[INFO ] 2020-05-25 09:24:39.979 [http-nio-8080-exec-4] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 09:24:39.981 [http-nio-8080-exec-4] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 09:24:39.985 [http-nio-8080-exec-4] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 09:24:39.988 [http-nio-8080-exec-4] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 09:24:39.993 [HikariPool-1 connection adder] connection - 10. Connection opened
+[INFO ] 2020-05-25 09:24:39.994 [HikariPool-1 connection adder] audit - 10. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:24:39.995 [HikariPool-1 connection adder] audit - 10. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:24:39.995 [HikariPool-1 connection adder] audit - 10. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:24:40.321 [http-nio-8080-exec-5] TestController - ------------------------로그인성공------------------------
+[INFO ] 2020-05-25 09:24:44.736 [http-nio-8080-exec-6] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:24:45.264 [http-nio-8080-exec-7] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:24:48.401 [http-nio-8080-exec-8] TestController - ------------------------관리자페이지------------------------
+[INFO ] 2020-05-25 09:24:49.180 [http-nio-8080-exec-9] TestController - ------------------------관리자페이지------------------------
+[INFO ] 2020-05-25 09:31:08.718 [SpringContextShutdownHook] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 09:31:08.718 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2020-05-25 09:31:08.726 [HikariPool-1 connection closer] connection - 1. Connection closed
+[INFO ] 2020-05-25 09:31:08.727 [HikariPool-1 connection closer] audit - 1. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.728 [HikariPool-1 connection closer] connection - 2. Connection closed
+[INFO ] 2020-05-25 09:31:08.728 [HikariPool-1 connection closer] audit - 2. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.729 [HikariPool-1 connection closer] connection - 3. Connection closed
+[INFO ] 2020-05-25 09:31:08.730 [HikariPool-1 connection closer] audit - 3. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.730 [HikariPool-1 connection closer] connection - 4. Connection closed
+[INFO ] 2020-05-25 09:31:08.731 [HikariPool-1 connection closer] audit - 4. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.731 [HikariPool-1 connection closer] connection - 5. Connection closed
+[INFO ] 2020-05-25 09:31:08.732 [HikariPool-1 connection closer] audit - 5. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.733 [HikariPool-1 connection closer] connection - 6. Connection closed
+[INFO ] 2020-05-25 09:31:08.733 [HikariPool-1 connection closer] audit - 6. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.735 [HikariPool-1 connection closer] connection - 7. Connection closed
+[INFO ] 2020-05-25 09:31:08.735 [HikariPool-1 connection closer] audit - 7. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.736 [HikariPool-1 connection closer] connection - 8. Connection closed
+[INFO ] 2020-05-25 09:31:08.737 [HikariPool-1 connection closer] audit - 8. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.739 [HikariPool-1 connection closer] connection - 9. Connection closed
+[INFO ] 2020-05-25 09:31:08.739 [HikariPool-1 connection closer] audit - 9. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.740 [HikariPool-1 connection closer] connection - 10. Connection closed
+[INFO ] 2020-05-25 09:31:08.740 [HikariPool-1 connection closer] audit - 10. Connection.close() returned 
+[INFO ] 2020-05-25 09:31:08.741 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2020-05-25 09:31:18.096 [restartedMain] SecurityApplication - Starting SecurityApplication on gimminjong-ui-MacBook-Pro.local with PID 811 (/Users/mjk/IdeaProjects/security/build/classes/java/main started by mjk in /Users/mjk/IdeaProjects/security)
+[DEBUG] 2020-05-25 09:31:18.111 [restartedMain] SecurityApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+[INFO ] 2020-05-25 09:31:18.113 [restartedMain] SecurityApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2020-05-25 09:31:18.214 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2020-05-25 09:31:18.215 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2020-05-25 09:31:19.754 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-05-25 09:31:19.762 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:31:19.763 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2020-05-25 09:31:19.765 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+[INFO ] 2020-05-25 09:31:20.088 [restartedMain] TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 2020-05-25 09:31:20.092 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-05-25 09:31:20.093 [restartedMain] ContextLoader - Root WebApplicationContext: initialization completed in 1878 ms
+[INFO ] 2020-05-25 09:31:20.697 [restartedMain] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 09:31:20.771 [restartedMain] WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2020-05-25 09:31:21.026 [restartedMain] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77abae6d, org.springframework.security.web.context.SecurityContextPersistenceFilter@413acacb, org.springframework.security.web.header.HeaderWriterFilter@60b27990, org.springframework.security.web.csrf.CsrfFilter@6ece250, org.springframework.security.web.authentication.logout.LogoutFilter@4988cd7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@79620f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69ab8fad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f0db087, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b585e76, org.springframework.security.web.session.SessionManagementFilter@2ffc56e0, org.springframework.security.web.access.ExceptionTranslationFilter@5383be22, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2bd826b6]
+[INFO ] 2020-05-25 09:31:21.076 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2020-05-25 09:31:21.102 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:31:21.148 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2020-05-25 09:31:21.161 [restartedMain] SecurityApplication - Started SecurityApplication in 3.59 seconds (JVM running for 5.585)
+[INFO ] 2020-05-25 09:31:23.198 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:31:23.199 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:31:23.212 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 13 ms
+[INFO ] 2020-05-25 09:31:25.796 [http-nio-8080-exec-2] TestController - ------------------------로그인------------------------
+[INFO ] 2020-05-25 09:31:27.858 [http-nio-8080-exec-3] TestController - ------------------------로그인------------------------
+[INFO ] 2020-05-25 09:31:29.350 [http-nio-8080-exec-4] CustomAuthenticationProvider - ### authenticate ### 
+[INFO ] 2020-05-25 09:31:29.353 [http-nio-8080-exec-4] AccountService - ## loadUserByUsername ##
+[INFO ] 2020-05-25 09:31:29.394 [http-nio-8080-exec-4] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-05-25 09:31:29.545 [http-nio-8080-exec-4] connection - 1. Connection opened
+[INFO ] 2020-05-25 09:31:29.545 [http-nio-8080-exec-4] audit - 1. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.545 [http-nio-8080-exec-4] audit - 1. Connection.getNetworkTimeout() returned 0
+[INFO ] 2020-05-25 09:31:29.547 [http-nio-8080-exec-4] audit - 1. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.547 [http-nio-8080-exec-4] audit - 1. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:31:29.547 [http-nio-8080-exec-4] audit - 1. Connection.isValid(1) returned true
+[INFO ] 2020-05-25 09:31:29.548 [http-nio-8080-exec-4] audit - 1. Connection.getTransactionIsolation() returned 4
+[INFO ] 2020-05-25 09:31:29.551 [http-nio-8080-exec-4] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-05-25 09:31:29.555 [http-nio-8080-exec-4] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 09:31:29.565 [http-nio-8080-exec-4] readAccount - ==>  Preparing: SELECT * FROM USER_INFO WHERE ID= ? 
+[INFO ] 2020-05-25 09:31:29.699 [http-nio-8080-exec-4] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 09:31:29.707 [http-nio-8080-exec-4] audit - 1. Connection.prepareStatement(SELECT * FROM USER_INFO
+		WHERE ID= ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4a70cdf4
+[INFO ] 2020-05-25 09:31:29.758 [HikariPool-1 connection adder] connection - 2. Connection opened
+[INFO ] 2020-05-25 09:31:29.759 [HikariPool-1 connection adder] audit - 2. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.765 [HikariPool-1 connection adder] audit - 2. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.766 [HikariPool-1 connection adder] audit - 2. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:31:29.807 [HikariPool-1 connection adder] connection - 3. Connection opened
+[INFO ] 2020-05-25 09:31:29.813 [HikariPool-1 connection adder] audit - 3. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.816 [HikariPool-1 connection adder] audit - 3. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.817 [HikariPool-1 connection adder] audit - 3. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:31:29.828 [HikariPool-1 connection adder] connection - 4. Connection opened
+[INFO ] 2020-05-25 09:31:29.835 [HikariPool-1 connection adder] audit - 4. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.838 [HikariPool-1 connection adder] audit - 4. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.842 [HikariPool-1 connection adder] audit - 4. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:31:29.857 [HikariPool-1 connection adder] connection - 5. Connection opened
+[INFO ] 2020-05-25 09:31:29.856 [http-nio-8080-exec-4] audit - 1. PreparedStatement.setString(1, "") returned 
+[INFO ] 2020-05-25 09:31:29.857 [HikariPool-1 connection adder] audit - 5. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.860 [HikariPool-1 connection adder] audit - 5. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.868 [HikariPool-1 connection adder] audit - 5. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 09:31:29.870 [http-nio-8080-exec-4] readAccount - ==> Parameters: (String)
+[INFO ] 2020-05-25 09:31:29.872 [http-nio-8080-exec-4] sqlonly - SELECT * FROM USER_INFO
+		WHERE ID= ''
+
+[INFO ] 2020-05-25 09:31:29.886 [HikariPool-1 connection adder] connection - 6. Connection opened
+[INFO ] 2020-05-25 09:31:29.887 [HikariPool-1 connection adder] audit - 6. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.889 [HikariPool-1 connection adder] audit - 6. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.890 [HikariPool-1 connection adder] audit - 6. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:31:29.902 [HikariPool-1 connection adder] connection - 7. Connection opened
+[INFO ] 2020-05-25 09:31:29.903 [HikariPool-1 connection adder] audit - 7. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.903 [HikariPool-1 connection adder] audit - 7. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.906 [HikariPool-1 connection adder] audit - 7. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:31:29.916 [HikariPool-1 connection adder] connection - 8. Connection opened
+[INFO ] 2020-05-25 09:31:29.917 [HikariPool-1 connection adder] audit - 8. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.918 [HikariPool-1 connection adder] audit - 8. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.918 [HikariPool-1 connection adder] audit - 8. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:31:29.931 [http-nio-8080-exec-4] sqltiming - SELECT * FROM USER_INFO
+		WHERE ID= ''
+ {executed in 58 msec}
+[INFO ] 2020-05-25 09:31:29.933 [http-nio-8080-exec-4] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 09:31:29.939 [HikariPool-1 connection adder] connection - 9. Connection opened
+[INFO ] 2020-05-25 09:31:29.940 [HikariPool-1 connection adder] audit - 9. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.943 [HikariPool-1 connection adder] audit - 9. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.946 [HikariPool-1 connection adder] audit - 9. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:31:29.948 [http-nio-8080-exec-4] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 09:31:29.949 [http-nio-8080-exec-4] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@53f7f781
+[INFO ] 2020-05-25 09:31:29.951 [HikariPool-1 connection adder] connection - 10. Connection opened
+[INFO ] 2020-05-25 09:31:29.951 [HikariPool-1 connection adder] audit - 10. Connection.new Connection returned 
+[INFO ] 2020-05-25 09:31:29.952 [HikariPool-1 connection adder] audit - 10. Connection.isReadOnly() returned false
+[INFO ] 2020-05-25 09:31:29.952 [HikariPool-1 connection adder] audit - 10. Connection.getAutoCommit() returned true
+[INFO ] 2020-05-25 09:31:29.966 [http-nio-8080-exec-4] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@44fb9ba2 - Field level information: 
+	com.mysql.cj.result.Field@57649a5e[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=id,originalColumnName=id,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@54530813[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@28e3e569[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonexpired,originalColumnName=isAccountNonexpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@305d5d5c[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonLocked,originalColumnName=isAccountNonLocked,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@43988763[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isCredentialsNonExpired,originalColumnName=isCredentialsNonExpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@fc70c93[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isEnabled,originalColumnName=isEnabled,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+[INFO ] 2020-05-25 09:31:29.968 [http-nio-8080-exec-4] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 09:31:29.977 [http-nio-8080-exec-4] resultsettable - 
+|---|---------|--------------------|-------------------|------------------------|----------|
+|id |password |isaccountnonexpired |isaccountnonlocked |iscredentialsnonexpired |isenabled |
+|---|---------|--------------------|-------------------|------------------------|----------|
+|---|---------|--------------------|-------------------|------------------------|----------|
+
+[INFO ] 2020-05-25 09:31:29.977 [http-nio-8080-exec-4] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 09:31:29.993 [http-nio-8080-exec-4] readAccount - <==      Total: 0
+[INFO ] 2020-05-25 09:31:29.994 [http-nio-8080-exec-4] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 09:31:30.009 [http-nio-8080-exec-4] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@7b18b3c3
+[INFO ] 2020-05-25 09:31:30.021 [http-nio-8080-exec-4] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 09:31:30.023 [http-nio-8080-exec-4] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 09:31:30.040 [http-nio-8080-exec-4] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 09:31:30.051 [http-nio-8080-exec-4] audit - 1. Connection.clearWarnings() returned 
+[DEBUG] 2020-05-25 09:31:30.054 [http-nio-8080-exec-4] AccountService - ## 계정정보가 존재하지 않습니다. ##
+[INFO ] 2020-05-25 09:31:30.083 [http-nio-8080-exec-5] TestController - ------------------------로그인------------------------
+[INFO ] 2020-05-25 09:31:34.274 [http-nio-8080-exec-6] CustomAuthenticationProvider - ### authenticate ### 
+[INFO ] 2020-05-25 09:31:34.274 [http-nio-8080-exec-6] AccountService - ## loadUserByUsername ##
+[INFO ] 2020-05-25 09:31:34.277 [http-nio-8080-exec-6] audit - 1. Connection.isValid(5) returned true
+[INFO ] 2020-05-25 09:31:34.277 [http-nio-8080-exec-6] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 09:31:34.277 [http-nio-8080-exec-6] readAccount - ==>  Preparing: SELECT * FROM USER_INFO WHERE ID= ? 
+[INFO ] 2020-05-25 09:31:34.278 [http-nio-8080-exec-6] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 09:31:34.279 [http-nio-8080-exec-6] audit - 1. Connection.prepareStatement(SELECT * FROM USER_INFO
+		WHERE ID= ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1d7992d4
+[INFO ] 2020-05-25 09:31:34.280 [http-nio-8080-exec-6] audit - 1. PreparedStatement.setString(1, "member") returned 
+[DEBUG] 2020-05-25 09:31:34.280 [http-nio-8080-exec-6] readAccount - ==> Parameters: member(String)
+[INFO ] 2020-05-25 09:31:34.280 [http-nio-8080-exec-6] sqlonly - SELECT * FROM USER_INFO
+		WHERE ID= 'member'
+
+[INFO ] 2020-05-25 09:31:34.283 [http-nio-8080-exec-6] sqltiming - SELECT * FROM USER_INFO
+		WHERE ID= 'member'
+ {executed in 1 msec}
+[INFO ] 2020-05-25 09:31:34.283 [http-nio-8080-exec-6] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 09:31:34.283 [http-nio-8080-exec-6] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 09:31:34.283 [http-nio-8080-exec-6] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@194605a3
+[INFO ] 2020-05-25 09:31:34.284 [http-nio-8080-exec-6] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@5c4498ef - Field level information: 
+	com.mysql.cj.result.Field@3c6cbd42[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=id,originalColumnName=id,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@6dd26729[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+	com.mysql.cj.result.Field@44101c2d[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonexpired,originalColumnName=isAccountNonexpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@3c6b67a0[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isAccountNonLocked,originalColumnName=isAccountNonLocked,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@65b44bc2[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isCredentialsNonExpired,originalColumnName=isCredentialsNonExpired,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1ba18372[dbName=test,tableName=USER_INFO,originalTableName=user_info,columnName=isEnabled,originalColumnName=isEnabled,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+[INFO ] 2020-05-25 09:31:34.311 [http-nio-8080-exec-6] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 09:31:34.314 [http-nio-8080-exec-6] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 09:31:34.323 [http-nio-8080-exec-6] resultset - 1. ResultSet.getString(id) returned member
+[INFO ] 2020-05-25 09:31:34.323 [http-nio-8080-exec-6] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:31:34.324 [http-nio-8080-exec-6] resultset - 1. ResultSet.getString(password) returned {bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO
+[INFO ] 2020-05-25 09:31:34.324 [http-nio-8080-exec-6] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:31:34.324 [http-nio-8080-exec-6] resultset - 1. ResultSet.getBoolean(isAccountNonexpired) returned true
+[INFO ] 2020-05-25 09:31:34.324 [http-nio-8080-exec-6] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:31:34.324 [http-nio-8080-exec-6] resultset - 1. ResultSet.getBoolean(isAccountNonLocked) returned true
+[INFO ] 2020-05-25 09:31:34.324 [http-nio-8080-exec-6] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:31:34.326 [http-nio-8080-exec-6] resultset - 1. ResultSet.getBoolean(isCredentialsNonExpired) returned true
+[INFO ] 2020-05-25 09:31:34.326 [http-nio-8080-exec-6] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:31:34.326 [http-nio-8080-exec-6] resultset - 1. ResultSet.getBoolean(isEnabled) returned true
+[INFO ] 2020-05-25 09:31:34.326 [http-nio-8080-exec-6] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:31:34.328 [http-nio-8080-exec-6] resultsettable - 
+|-------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|id     |password                                                             |isaccountnonexpired |isaccountnonlocked |iscredentialsnonexpired |isenabled |
+|-------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+|member |{bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO |true                |true               |true                    |true      |
+|-------|---------------------------------------------------------------------|--------------------|-------------------|------------------------|----------|
+
+[INFO ] 2020-05-25 09:31:34.328 [http-nio-8080-exec-6] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 09:31:34.330 [http-nio-8080-exec-6] readAccount - <==      Total: 1
+[INFO ] 2020-05-25 09:31:34.330 [http-nio-8080-exec-6] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 09:31:34.330 [http-nio-8080-exec-6] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2b2721ca
+[INFO ] 2020-05-25 09:31:34.331 [http-nio-8080-exec-6] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 09:31:34.331 [http-nio-8080-exec-6] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 09:31:34.331 [http-nio-8080-exec-6] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 09:31:34.331 [http-nio-8080-exec-6] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 09:31:34.332 [http-nio-8080-exec-6] audit - 1. Connection.getAutoCommit() returned true
+[DEBUG] 2020-05-25 09:31:34.332 [http-nio-8080-exec-6] readAuthorites - ==>  Preparing: SELECT AUTHORITY_NAME FROM AUTHORITY WHERE USERNAME=? 
+[INFO ] 2020-05-25 09:31:34.332 [http-nio-8080-exec-6] audit - 1. PreparedStatement.new PreparedStatement returned 
+[INFO ] 2020-05-25 09:31:34.333 [http-nio-8080-exec-6] audit - 1. Connection.prepareStatement(SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@75b72bc3
+[INFO ] 2020-05-25 09:31:34.334 [http-nio-8080-exec-6] audit - 1. PreparedStatement.setString(1, "member") returned 
+[DEBUG] 2020-05-25 09:31:34.334 [http-nio-8080-exec-6] readAuthorites - ==> Parameters: member(String)
+[INFO ] 2020-05-25 09:31:34.334 [http-nio-8080-exec-6] sqlonly - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='member'
+
+[INFO ] 2020-05-25 09:31:34.335 [http-nio-8080-exec-6] sqltiming - SELECT AUTHORITY_NAME
+		FROM AUTHORITY WHERE USERNAME='member'
+ {executed in 1 msec}
+[INFO ] 2020-05-25 09:31:34.336 [http-nio-8080-exec-6] audit - 1. PreparedStatement.execute() returned true
+[INFO ] 2020-05-25 09:31:34.336 [http-nio-8080-exec-6] resultset - 1. ResultSet.new ResultSet returned 
+[INFO ] 2020-05-25 09:31:34.336 [http-nio-8080-exec-6] audit - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5eda9556
+[INFO ] 2020-05-25 09:31:34.337 [http-nio-8080-exec-6] resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@4f8f81af - Field level information: 
+	com.mysql.cj.result.Field@3aa42ae[dbName=test,tableName=AUTHORITY,originalTableName=authority,columnName=AUTHORITY_NAME,originalColumnName=authority_name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=83, charsetName=UTF-8]
+[INFO ] 2020-05-25 09:31:34.337 [http-nio-8080-exec-6] resultset - 1. ResultSet.getType() returned 1003
+[INFO ] 2020-05-25 09:31:34.338 [http-nio-8080-exec-6] resultset - 1. ResultSet.next() returned true
+[INFO ] 2020-05-25 09:31:34.339 [http-nio-8080-exec-6] resultset - 1. ResultSet.getString(AUTHORITY_NAME) returned ROLE_MEMBER
+[INFO ] 2020-05-25 09:31:34.339 [http-nio-8080-exec-6] resultset - 1. ResultSet.wasNull() returned false
+[INFO ] 2020-05-25 09:31:34.339 [http-nio-8080-exec-6] resultsettable - 
+|---------------|
+|authority_name |
+|---------------|
+|ROLE_MEMBER    |
+|---------------|
+
+[INFO ] 2020-05-25 09:31:34.341 [http-nio-8080-exec-6] resultset - 1. ResultSet.next() returned false
+[DEBUG] 2020-05-25 09:31:34.341 [http-nio-8080-exec-6] readAuthorites - <==      Total: 1
+[INFO ] 2020-05-25 09:31:34.341 [http-nio-8080-exec-6] resultset - 1. ResultSet.close() returned void
+[INFO ] 2020-05-25 09:31:34.341 [http-nio-8080-exec-6] audit - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@78f3c2ec
+[INFO ] 2020-05-25 09:31:34.342 [http-nio-8080-exec-6] audit - 1. PreparedStatement.getMoreResults() returned false
+[INFO ] 2020-05-25 09:31:34.342 [http-nio-8080-exec-6] audit - 1. PreparedStatement.getUpdateCount() returned -1
+[INFO ] 2020-05-25 09:31:34.342 [http-nio-8080-exec-6] audit - 1. PreparedStatement.close() returned 
+[INFO ] 2020-05-25 09:31:34.342 [http-nio-8080-exec-6] audit - 1. Connection.clearWarnings() returned 
+[INFO ] 2020-05-25 09:31:34.477 [http-nio-8080-exec-7] TestController - ------------------------로그인성공------------------------
+[INFO ] 2020-05-25 09:31:37.196 [http-nio-8080-exec-8] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:31:37.197 [http-nio-8080-exec-8] TestController - accessDenied : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@353377d2: Principal: Account(id=member, password={bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO, failCnt=0, isAccountNonExpired=true, isAccountNonLocked=true, isCredentialsNonExpired=true, isEnabled=true, authorities=[ROLE_MEMBER]); Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@ffff4c9c: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 2766B922E952FA51FDF58FD7B639B11B; Granted Authorities: ROLE_MEMBER
+[INFO ] 2020-05-25 09:31:37.893 [http-nio-8080-exec-9] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:31:37.893 [http-nio-8080-exec-9] TestController - accessDenied : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@353377d2: Principal: Account(id=member, password={bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO, failCnt=0, isAccountNonExpired=true, isAccountNonLocked=true, isCredentialsNonExpired=true, isEnabled=true, authorities=[ROLE_MEMBER]); Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@ffff4c9c: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 2766B922E952FA51FDF58FD7B639B11B; Granted Authorities: ROLE_MEMBER
+[INFO ] 2020-05-25 09:40:48.857 [SpringContextShutdownHook] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 09:40:48.859 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2020-05-25 09:40:48.871 [HikariPool-1 connection closer] connection - 1. Connection closed
+[INFO ] 2020-05-25 09:40:48.871 [HikariPool-1 connection closer] audit - 1. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.874 [HikariPool-1 connection closer] connection - 2. Connection closed
+[INFO ] 2020-05-25 09:40:48.875 [HikariPool-1 connection closer] audit - 2. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.875 [HikariPool-1 connection closer] connection - 3. Connection closed
+[INFO ] 2020-05-25 09:40:48.875 [HikariPool-1 connection closer] audit - 3. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.876 [HikariPool-1 connection closer] connection - 4. Connection closed
+[INFO ] 2020-05-25 09:40:48.876 [HikariPool-1 connection closer] audit - 4. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.876 [HikariPool-1 connection closer] connection - 5. Connection closed
+[INFO ] 2020-05-25 09:40:48.877 [HikariPool-1 connection closer] audit - 5. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.877 [HikariPool-1 connection closer] connection - 6. Connection closed
+[INFO ] 2020-05-25 09:40:48.877 [HikariPool-1 connection closer] audit - 6. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.878 [HikariPool-1 connection closer] connection - 7. Connection closed
+[INFO ] 2020-05-25 09:40:48.879 [HikariPool-1 connection closer] audit - 7. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.879 [HikariPool-1 connection closer] connection - 8. Connection closed
+[INFO ] 2020-05-25 09:40:48.880 [HikariPool-1 connection closer] audit - 8. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.880 [HikariPool-1 connection closer] connection - 9. Connection closed
+[INFO ] 2020-05-25 09:40:48.880 [HikariPool-1 connection closer] audit - 9. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.880 [HikariPool-1 connection closer] connection - 10. Connection closed
+[INFO ] 2020-05-25 09:40:48.881 [HikariPool-1 connection closer] audit - 10. Connection.close() returned 
+[INFO ] 2020-05-25 09:40:48.881 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2020-05-25 09:40:59.148 [restartedMain] SecurityApplication - Starting SecurityApplication on gimminjong-ui-MacBook-Pro.local with PID 881 (/Users/mjk/IdeaProjects/security/build/classes/java/main started by mjk in /Users/mjk/IdeaProjects/security)
+[DEBUG] 2020-05-25 09:40:59.155 [restartedMain] SecurityApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+[INFO ] 2020-05-25 09:40:59.162 [restartedMain] SecurityApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2020-05-25 09:40:59.258 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2020-05-25 09:40:59.258 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2020-05-25 09:41:00.550 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-05-25 09:41:00.558 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:41:00.559 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2020-05-25 09:41:00.559 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+[INFO ] 2020-05-25 09:41:00.903 [restartedMain] TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 2020-05-25 09:41:00.910 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-05-25 09:41:00.910 [restartedMain] ContextLoader - Root WebApplicationContext: initialization completed in 1651 ms
+[INFO ] 2020-05-25 09:41:01.490 [restartedMain] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-25 09:41:01.553 [restartedMain] WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2020-05-25 09:41:01.775 [restartedMain] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fe50e68, org.springframework.security.web.context.SecurityContextPersistenceFilter@6181f3b1, org.springframework.security.web.header.HeaderWriterFilter@2fae91ec, org.springframework.security.web.csrf.CsrfFilter@61bbd4fe, org.springframework.security.web.authentication.logout.LogoutFilter@54793750, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13c7a6af, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@734dbf9e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7bce1119, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@122db702, org.springframework.security.web.session.SessionManagementFilter@1667fe95, org.springframework.security.web.access.ExceptionTranslationFilter@8f76610, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18785663]
+[INFO ] 2020-05-25 09:41:01.814 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2020-05-25 09:41:01.837 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-25 09:41:01.879 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2020-05-25 09:41:01.892 [restartedMain] SecurityApplication - Started SecurityApplication in 3.102 seconds (JVM running for 5.733)
+[INFO ] 2020-05-25 09:41:03.088 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:41:03.089 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-05-25 09:41:03.098 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2020-05-25 09:41:03.170 [http-nio-8080-exec-1] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:41:03.172 [http-nio-8080-exec-1] TestController - accessDenied : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@353377d2: Principal: Account(id=member, password={bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO, failCnt=0, isAccountNonExpired=true, isAccountNonLocked=true, isCredentialsNonExpired=true, isEnabled=true, authorities=[ROLE_MEMBER]); Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@ffff4c9c: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 2766B922E952FA51FDF58FD7B639B11B; Granted Authorities: ROLE_MEMBER
+[INFO ] 2020-05-25 09:41:12.781 [http-nio-8080-exec-3] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:41:12.783 [http-nio-8080-exec-3] TestController - accessDenied : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@353377d2: Principal: Account(id=member, password={bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO, failCnt=0, isAccountNonExpired=true, isAccountNonLocked=true, isCredentialsNonExpired=true, isEnabled=true, authorities=[ROLE_MEMBER]); Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@ffff4c9c: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 2766B922E952FA51FDF58FD7B639B11B; Granted Authorities: ROLE_MEMBER
+[INFO ] 2020-05-25 09:41:13.622 [http-nio-8080-exec-4] TestController - ------------------------권한이없습니다------------------------
+[INFO ] 2020-05-25 09:41:13.623 [http-nio-8080-exec-4] TestController - accessDenied : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@353377d2: Principal: Account(id=member, password={bcrypt}$2a$10$KmeQMmC62oTmxf6Lv56NDOVCGR5LNh5VkjMe98741HNQg14TBsNPO, failCnt=0, isAccountNonExpired=true, isAccountNonLocked=true, isCredentialsNonExpired=true, isEnabled=true, authorities=[ROLE_MEMBER]); Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@ffff4c9c: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: 2766B922E952FA51FDF58FD7B639B11B; Granted Authorities: ROLE_MEMBER
